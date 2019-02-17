@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="30dp"
+        tools:srcCompat="@tools:sample/avatars[12]" />
+
+    <RatingBar
+        android:id="@+id/cost"
+        style="@android:style/Widget.DeviceDefault.Light.RatingBar.Indicator"
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="290dp"
+        android:layout_marginTop="-110dp" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        style="@android:style/Widget.DeviceDefault.Light.RatingBar.Indicator"
+        android:layout_width="146dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="-37dp" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="[Food Place ]"
+        android:textAlignment="center" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editText4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Time:" />
+
+            <ImageButton
+                android:id="@+id/imageButton4"
+                android:layout_width="81dp"
+                android:layout_height="77dp"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="-60dp"
+                android:ems="10"
+                android:inputType="time" />
+
+            <EditText
+                android:id="@+id/editText5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Location"
+                android:textAlignment="textEnd" />
+
+            <EditText
+                android:id="@+id/editText6"
+                android:layout_width="198dp"
+                android:layout_height="134dp"
+                android:ems="10"
+                android:inputType="textPostalAddress"
+                android:text="[ address ]" />
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/mapView"
+                android:layout_width="210dp"
+                android:layout_height="130dp"
+                android:layout_marginLeft="199dp"
+                android:layout_marginTop="-130dp" />
+
+            <EditText
+                android:id="@+id/editText7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Social" />
+
+            <WebView
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
