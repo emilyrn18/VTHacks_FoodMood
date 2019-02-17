@@ -49,7 +49,9 @@
                 android:layout_height="100dp"
                 android:layout_marginLeft="185dp"
                 android:layout_marginRight="180dp"
+                android:autofillHints="Search"
                 android:ems="10"
+                android:importantForAutofill="no"
                 android:inputType="textPersonName"
                 android:selectAllOnFocus="false"
                 android:singleLine="false"
@@ -61,25 +63,28 @@
                 android:orientation="horizontal">
 
                 <ImageButton
-                    android:id="@+id/imageButton4"
+                    android:id="@+id/sugbutton2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    tools:srcCompat="@tools:sample/avatars[2]" />
+                    tools:srcCompat="@tools:sample/avatars[2]"
+                    android:contentDescription="TODO" />
 
                 <ImageButton
-                    android:id="@+id/imageButton5"
+                    android:id="@+id/sugbutton1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    tools:srcCompat="@tools:sample/avatars[5]" />
+                    tools:srcCompat="@tools:sample/avatars[5]"
+                    android:contentDescription="TODO" />
 
                 <ImageButton
-                    android:id="@+id/imageButton6"
+                    android:id="@+id/sugbutton6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    tools:srcCompat="@tools:sample/avatars[14]" />
+                    tools:srcCompat="@tools:sample/avatars[14]"
+                    android:contentDescription="TODO" />
 
             </LinearLayout>
 
@@ -93,28 +98,31 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    tools:srcCompat="@tools:sample/avatars[2]" />
+                    tools:srcCompat="@tools:sample/avatars[2]"
+                    android:contentDescription="TODO" />
 
                 <ImageButton
                     android:id="@+id/imageButton5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    tools:srcCompat="@tools:sample/avatars[5]" />
+                    tools:srcCompat="@tools:sample/avatars[5]"
+                    android:contentDescription="TODO" />
 
                 <ImageButton
                     android:id="@+id/imageButton6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    tools:srcCompat="@tools:sample/avatars[14]" />
+                    tools:srcCompat="@tools:sample/avatars[14]"
+                    android:contentDescription="TODO" />
             </LinearLayout>
 
             <EditText
                 android:id="@+id/editText4"
                 android:layout_width="166dp"
                 android:layout_height="100dp"
-                android:layout_marginLeft="125dp"
+                android:layout_marginStart="125dp"
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:selectAllOnFocus="false"
