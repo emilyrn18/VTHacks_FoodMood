@@ -3,6 +3,7 @@ package com.example.myapplication;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
@@ -32,6 +33,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ProgressBar;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,7 +56,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private Button emailSignIn;
     private EditText mEmailView;
     private EditText mPasswordView;
-    private ProgessBar progressBar;
+    private ProgressDialog pDiag;
+    private FirebaseAuth firebaseAuth;
+    private Button emailReg;
     //private TextView textViewSignup;
     //private View mProgressView;
     //private View mLoginFormView;
@@ -63,11 +72,17 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        pDiag = new ProgressDialog(this);
+
+        firebaseAuth = FirebaseAuth.getInstance();
+
         emailSignIn = (Button) findViewById(R.id.email_sign_in_button);
         mEmailView =  (EditText) findViewById(R.id.email);
         mPasswordView = (EditText) findViewById(R.id.password);
+        emailReg = (Button) findViewById(R.id.Register_button);
 
         emailSignIn.setOnClickListener(this);
+        emailReg.setOnClickListener(this);
 
     }
 
@@ -77,15 +92,37 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         String password = mPasswordView.getText().toString().trim();
         //checking if both strings is empty
         if(mEmailView.getTextSize()==0){
-            Toast.makeText("need info", "Plase Enter Email", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Please Enter Email", Toast.LENGTH_SHORT).show();
             return;
         }
         if(mPasswordView.getTextSize()== 0){
-            Toast.makeText("need info", "Please Enter Password", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Please Enter Password", Toast.LENGTH_SHORT).show();
             return;
         }
         //if validations are ok
         //continue to link to firebase
+        pDiag.setMessage("Processing. Please Wait");
+        pDiag.show();
+
+        //regieters new user
+        firebaseAuth.createUserWithEmailAndPassword(email,password)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>(){
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()){
+                            //user is successfully registered
+                            // changes to next screen
+                            Toast.makeText(getApplicationContext(), "Registeration Successful!", Toast.LENGTH_SHORT).show();
+                            Log.i("My App", "Changes to next screen!");
+                            startActivity(new Intent( LoginActivity.this, HomePage.class ));
+                        }
+
+                        else {
+                            Toast.makeText(getApplicationContext(), "Registeration Failed!", Toast.LENGTH_SHORT).show();
+                            Log.i("My App", "Resgisteration failed");
+
+                        }
+                    }
+                });
 
     }
     /**
@@ -98,7 +135,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
      */
     @Override
     public void onClick(View view) {
-        if(view == emailSignIn){
+        if(view == emailReg){
             registerUser();
         }
     }

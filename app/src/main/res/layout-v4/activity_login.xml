@@ -80,17 +80,39 @@
 
             </android.support.design.widget.TextInputLayout>
 
-            <Button
-                android:id="@+id/email_sign_in_button"
-                style="?android:textAppearanceSmall"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="63dp"
-                android:layout_marginVertical="@dimen/activity_vertical_margin"
-                android:background="@color/colorAccent"
-                android:text="@string/action_sign_in"
-                android:textColor="@android:color/white"
-                android:textColorLink="@android:color/holo_red_light"
-                android:textStyle="bold" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/Register_button"
+                    style="?android:textAppearanceSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="63dp"
+                    android:layout_marginVertical="@dimen/activity_vertical_margin"
+                    android:layout_weight="1"
+                    android:background="@color/colorAccent"
+                    android:text="@string/string_register"
+                    android:textColor="@android:color/white"
+                    android:textColorLink="@android:color/holo_red_light"
+                    android:textStyle="bold"
+                    tools:text="Register" />
+
+                <Button
+                    android:id="@+id/email_sign_in_button"
+                    style="?android:textAppearanceSmall"
+                    android:layout_width="178dp"
+                    android:layout_height="63dp"
+                    android:layout_marginVertical="@dimen/activity_vertical_margin"
+                    android:background="@color/colorAccent"
+                    android:text="@string/action_sign_in_short"
+                    android:textColor="@android:color/white"
+                    android:textColorLink="@android:color/holo_red_light"
+                    android:textStyle="bold"
+                    tools:text="Sign In" />
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -104,8 +126,8 @@
                     android:id="@+id/imageButton"
                     android:layout_width="0dp"
                     android:layout_height="78dp"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginRight="35dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="35dp"
                     android:layout_weight="1"
                     android:adjustViewBounds="true"
                     android:contentDescription="@android:string/VideoView_error_button"
@@ -117,7 +139,7 @@
                     android:id="@+id/imageButton2"
                     android:layout_width="0dp"
                     android:layout_height="78dp"
-                    android:layout_marginRight="35dp"
+                    android:layout_marginEnd="35dp"
                     android:layout_weight="1"
                     android:adjustViewBounds="true"
                     android:contentDescription="@android:string/VideoView_error_button"
@@ -129,7 +151,7 @@
                     android:id="@+id/imageButton3"
                     android:layout_width="0dp"
                     android:layout_height="78dp"
-                    android:layout_marginRight="35dp"
+                    android:layout_marginEnd="35dp"
                     android:layout_weight="1"
                     android:adjustViewBounds="true"
                     android:contentDescription="@android:string/VideoView_error_button"
