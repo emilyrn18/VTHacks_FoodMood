@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                android:text="What's your craving?"
+                android:text="@string/what_s_your_craving"
                 android:textAlignment="center"
                 android:textSize="18sp"
                 android:textStyle="normal|bold" />
@@ -60,14 +60,14 @@
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
-                android:layout_height="54dp"
+                android:layout_height="0dp"
                 android:layout_weight="1"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
-                android:text="-OR-"
+                android:text="@string/or"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
-                android:textSize="30dp" />
+                android:textSize="30sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -80,7 +80,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    android:contentDescription="TODO"
+                    android:contentDescription="@string/todo"
                     tools:srcCompat="@tools:sample/avatars[2]" />
 
                 <ImageButton
@@ -89,7 +89,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    android:contentDescription="TODO"
+                    android:contentDescription="@string/todo"
                     tools:srcCompat="@tools:sample/avatars[5]" />
 
                 <ImageButton
@@ -98,7 +98,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    android:contentDescription="TODO"
+                    android:contentDescription="@string/todo"
                     tools:srcCompat="@tools:sample/avatars[14]" />
 
             </LinearLayout>
@@ -109,10 +109,10 @@
                 android:layout_height="54dp"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
-                android:text="-Recently Searched-"
+                android:text="@string/recently_searched"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
-                android:textSize="30dp" />
+                android:textSize="30sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -125,7 +125,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    android:contentDescription="TODO"
+                    android:contentDescription="@string/todo"
                     tools:srcCompat="@tools:sample/avatars[2]" />
 
                 <ImageButton
@@ -134,7 +134,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    android:contentDescription="TODO"
+                    android:contentDescription="@string/todo"
                     tools:srcCompat="@tools:sample/avatars[5]" />
 
                 <ImageButton
@@ -143,7 +143,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    android:contentDescription="TODO"
+                    android:contentDescription="@string/todo"
                     tools:srcCompat="@tools:sample/avatars[14]" />
             </LinearLayout>
 
