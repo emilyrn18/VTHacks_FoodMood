@@ -13,14 +13,14 @@
         completions."
     </string>
     <string name="what_s_your_craving">What\'s your craving?</string>
-    <string name="or">-OR-</string>
-    <string name="todo">TODO</string>
-    <string name="todo">TODO</string>
+    //<string name="or">-OR-</string>
+    //<string name="todo">TODO</string>
+   // <string name="todo1">TODO</string>
     <string name="recently_searched">-Recently Searched-</string>
-    <string name="todo">TODO</string>
-    <string name="todo">TODO</string>
-    <string name="todo">TODO</string>
-    <string name="todo">TODO</string>
+    //<string name="todo2">TODO</string>
+   // <string name="todo3">TODO</string>
+   // <string name="todo4">TODO</string>
+   // <string name="todo5">TODO</string>
     <string name="register">Register</string>
     <string name="string_register">Register</string>
 </resources>
