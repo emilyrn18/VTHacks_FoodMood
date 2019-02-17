@@ -104,31 +104,38 @@
                     android:id="@+id/imageButton"
                     android:layout_width="0dp"
                     android:layout_height="78dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="35dp"
                     android:layout_weight="1"
                     android:adjustViewBounds="true"
                     android:contentDescription="@android:string/VideoView_error_button"
                     android:cropToPadding="true"
-                    tools:srcCompat="@tools:sample/avatars[12]" />
+                    android:padding="2dp"
+                    tools:srcCompat="@drawable/googlelogo" />
 
                 <ImageButton
                     android:id="@+id/imageButton2"
                     android:layout_width="0dp"
                     android:layout_height="78dp"
+                    android:layout_marginRight="35dp"
                     android:layout_weight="1"
                     android:adjustViewBounds="true"
                     android:contentDescription="@android:string/VideoView_error_button"
                     android:cropToPadding="true"
-                    tools:srcCompat="@tools:sample/avatars[14]" />
+                    android:padding="2dp"
+                    tools:srcCompat="@drawable/fblogo" />
 
                 <ImageButton
                     android:id="@+id/imageButton3"
                     android:layout_width="0dp"
                     android:layout_height="78dp"
+                    android:layout_marginRight="35dp"
                     android:layout_weight="1"
                     android:adjustViewBounds="true"
                     android:contentDescription="@android:string/VideoView_error_button"
                     android:cropToPadding="true"
-                    tools:srcCompat="@tools:sample/avatars[3]" />
+                    android:padding="2dp"
+                    tools:srcCompat="@drawable/snapchatlogo" />
 
             </LinearLayout>
 

@@ -28,34 +28,46 @@
 
             <ImageView
                 android:id="@+id/imageView2"
+                android:layout_width="310dp"
+                android:layout_height="224dp"
+                android:background="@drawable/title"
+                android:layout_gravity="center"
+                android:contentDescription="@string/app_name" />
+
+            <TextView
+                android:id="@+id/textView3"
                 android:layout_width="match_parent"
-                android:layout_height="280dp"
-                android:contentDescription="@string/app_name"
-                app:srcCompat="@drawable/title" />
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="What's your craving?"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="normal|bold" />
 
             <SearchView
                 android:id="@+id/CravingSearch"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:autofillHints="What are you craving?"
+                android:background="@color/colorAccent"
+                android:gravity="center"
                 android:inputType="text"
                 android:orientation="horizontal">
 
             </SearchView>
 
-            <EditText
-                android:id="@+id/editText3"
-                android:layout_width="42dp"
-                android:layout_height="100dp"
-                android:layout_marginLeft="185dp"
-                android:layout_marginRight="180dp"
-                android:autofillHints="Search"
-                android:ems="10"
-                android:importantForAutofill="no"
-                android:inputType="textPersonName"
-                android:selectAllOnFocus="false"
-                android:singleLine="false"
-                android:text="-OR-" />
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_weight="1"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="-OR-"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:textSize="30dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -66,27 +78,41 @@
                     android:id="@+id/sugbutton2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
                     android:layout_weight="1"
-                    tools:srcCompat="@tools:sample/avatars[2]"
-                    android:contentDescription="TODO" />
+                    android:contentDescription="TODO"
+                    tools:srcCompat="@tools:sample/avatars[2]" />
 
                 <ImageButton
                     android:id="@+id/sugbutton1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
                     android:layout_weight="1"
-                    tools:srcCompat="@tools:sample/avatars[5]"
-                    android:contentDescription="TODO" />
+                    android:contentDescription="TODO"
+                    tools:srcCompat="@tools:sample/avatars[5]" />
 
                 <ImageButton
                     android:id="@+id/sugbutton6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
                     android:layout_weight="1"
-                    tools:srcCompat="@tools:sample/avatars[14]"
-                    android:contentDescription="TODO" />
+                    android:contentDescription="TODO"
+                    tools:srcCompat="@tools:sample/avatars[14]" />
 
             </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="-Recently Searched-"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:textSize="30dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -97,37 +123,29 @@
                     android:id="@+id/imageButton4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
                     android:layout_weight="1"
-                    tools:srcCompat="@tools:sample/avatars[2]"
-                    android:contentDescription="TODO" />
+                    android:contentDescription="TODO"
+                    tools:srcCompat="@tools:sample/avatars[2]" />
 
                 <ImageButton
                     android:id="@+id/imageButton5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
                     android:layout_weight="1"
-                    tools:srcCompat="@tools:sample/avatars[5]"
-                    android:contentDescription="TODO" />
+                    android:contentDescription="TODO"
+                    tools:srcCompat="@tools:sample/avatars[5]" />
 
                 <ImageButton
                     android:id="@+id/imageButton6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
                     android:layout_weight="1"
-                    tools:srcCompat="@tools:sample/avatars[14]"
-                    android:contentDescription="TODO" />
+                    android:contentDescription="TODO"
+                    tools:srcCompat="@tools:sample/avatars[14]" />
             </LinearLayout>
-
-            <EditText
-                android:id="@+id/editText4"
-                android:layout_width="166dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="125dp"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:selectAllOnFocus="false"
-                android:singleLine="false"
-                android:text="-Recently Searched-" />
 
         </LinearLayout>
     </ScrollView>
