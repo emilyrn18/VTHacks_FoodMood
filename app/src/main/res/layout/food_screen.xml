@@ -14,22 +14,45 @@
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme" />
 
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="75"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginLeft="70dp"
+        android:layout_marginBottom="-24dp"
+        android:layout_marginTop="100dp"
+        android:inputType="textPersonName"
+        android:text="Reviews" />
+
+    <EditText
+        android:id="@+id/editText8"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginLeft="280dp"
+        android:layout_marginTop="-20dp"
+        android:layout_marginBottom="15dp"
+        android:inputType="textPersonName"
+        android:text="Cost" />
+
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="125dp"
+        android:layout_height="121dp"
         android:layout_marginLeft="150dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="-90dp"
         android:layout_marginBottom="30dp"
-        tools:srcCompat="@tools:sample/avatars[12]" />
+        tools:srcCompat="@drawable/food" />
 
     <RatingBar
         android:id="@+id/cost"
         style="@android:style/Widget.DeviceDefault.Light.RatingBar.Indicator"
         android:layout_width="115dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="290dp"
-        android:layout_marginTop="-110dp" />
+        android:layout_marginLeft="280dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="-90dp" />
 
     <RatingBar
         android:id="@+id/ratingBar"
@@ -37,16 +60,18 @@
         android:layout_width="146dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="0dp"
-        android:layout_marginTop="-37dp" />
+        android:layout_marginTop="-50dp" />
 
     <EditText
         android:id="@+id/editText2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="[Food Place ]"
+        android:text="El Rodeo"
+        android:textSize="30"
+        android:fontFamily="sans-serif-black"
         android:textAlignment="center" />
 
     <ScrollView
@@ -65,22 +90,23 @@
                 android:layout_marginTop="20dp"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="Time:" />
-
-            <ImageButton
-                android:id="@+id/imageButton4"
-                android:layout_width="81dp"
-                android:layout_height="77dp"
-                tools:srcCompat="@tools:sample/avatars" />
+                android:text="Hours of Operation:" />
 
             <EditText
                 android:id="@+id/editText"
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="80dp"
-                android:layout_marginTop="-60dp"
+                android:layout_width="300dp"
+                android:layout_height="165dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
                 android:ems="10"
-                android:inputType="time" />
+                android:lineHeight="10"
+                android:text="Sunday: 12:00pm - 10:00pm\n
+Monday: 11:00am - 10:00pm\n
+Tuesday: 11:00am - 10:00pm\n
+Wednesday: 11:00am - 10:00pm\n
+Thursday: 11:00am - 10:30pm\n
+Friday: 11:00am - 11:00pm\n
+Saturday: 12:00pm - 11:00pm" />
 
             <EditText
                 android:id="@+id/editText5"
@@ -94,18 +120,18 @@
 
             <EditText
                 android:id="@+id/editText6"
-                android:layout_width="198dp"
-                android:layout_height="134dp"
+                android:layout_width="395dp"
+                android:layout_height="100dp"
                 android:ems="10"
                 android:inputType="textPostalAddress"
-                android:text="[ address ]" />
+                android:text="  623 N Main St Blacksburg, VA 24060"/>
 
             <com.google.android.gms.maps.MapView
                 android:id="@+id/mapView"
-                android:layout_width="210dp"
+                android:layout_width="395dp"
                 android:layout_height="130dp"
-                android:layout_marginLeft="199dp"
-                android:layout_marginTop="-130dp" />
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="0dp" />
 
             <EditText
                 android:id="@+id/editText7"

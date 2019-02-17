@@ -78,28 +78,31 @@
                     android:id="@+id/sugbutton2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
+                    android:layout_margin=""
                     android:layout_weight="1"
+                    android:background="@drawable/burrito"
                     android:contentDescription="TODO"
-                    tools:srcCompat="@tools:sample/avatars[2]" />
+                    tools:srcCompat="@drawable/burrito" />
 
                 <ImageButton
                     android:id="@+id/sugbutton1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
+                    android:layout_margin=""
                     android:layout_weight="1"
+                    android:background="@drawable/coffee"
                     android:contentDescription="TODO"
-                    tools:srcCompat="@tools:sample/avatars[5]" />
+                    tools:srcCompat="@drawable/coffee" />
 
                 <ImageButton
                     android:id="@+id/sugbutton6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
+                    android:layout_margin=""
                     android:layout_weight="1"
+                    android:background="@drawable/milkshake"
                     android:contentDescription="TODO"
-                    tools:srcCompat="@tools:sample/avatars[14]" />
+                    tools:srcCompat="@drawable/milkshake" />
 
             </LinearLayout>
 
@@ -125,8 +128,9 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
+                    android:background="@drawable/coffee"
                     android:contentDescription="TODO"
-                    tools:srcCompat="@tools:sample/avatars[2]" />
+                    tools:srcCompat="@drawable/coffee" />
 
                 <ImageButton
                     android:id="@+id/imageButton5"
@@ -134,8 +138,9 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
+                    android:background="@drawable/coffee"
                     android:contentDescription="TODO"
-                    tools:srcCompat="@tools:sample/avatars[5]" />
+                    tools:srcCompat="@drawable/coffee" />
 
                 <ImageButton
                     android:id="@+id/imageButton6"
@@ -143,8 +148,9 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
+                    android:background="@drawable/coffee"
                     android:contentDescription="TODO"
-                    tools:srcCompat="@tools:sample/avatars[14]" />
+                    tools:srcCompat="@drawable/coffee" />
             </LinearLayout>
 
         </LinearLayout>
