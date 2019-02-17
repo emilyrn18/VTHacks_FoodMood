@@ -76,6 +76,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         firebaseAuth = FirebaseAuth.getInstance();
 
+        if( firebaseAuth.getCurrentUser() != null){
+
+        }
+
         emailSignIn = (Button) findViewById(R.id.email_sign_in_button);
         mEmailView =  (EditText) findViewById(R.id.email);
         mPasswordView = (EditText) findViewById(R.id.password);
@@ -87,44 +91,96 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
 
+    /**
+     * registers user to
+     * FirebaseAuth Database
+     */
     private void registerUser() {
         String email = mEmailView.getText().toString().trim();
         String password = mPasswordView.getText().toString().trim();
         //checking if both strings is empty
-        if(mEmailView.getTextSize()==0){
+        if (mEmailView.getTextSize() == 0) {
             Toast.makeText(getApplicationContext(), "Please Enter Email", Toast.LENGTH_SHORT).show();
             return;
         }
-        if(mPasswordView.getTextSize()== 0){
+        if (mPasswordView.getTextSize() == 0) {
             Toast.makeText(getApplicationContext(), "Please Enter Password", Toast.LENGTH_SHORT).show();
             return;
         }
+
         //if validations are ok
         //continue to link to firebase
         pDiag.setMessage("Processing. Please Wait");
         pDiag.show();
 
         //regieters new user
-        firebaseAuth.createUserWithEmailAndPassword(email,password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>(){
+        firebaseAuth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()){
+                        if (task.isSuccessful()) {
                             //user is successfully registered
                             // changes to next screen
+
                             Toast.makeText(getApplicationContext(), "Registeration Successful!", Toast.LENGTH_SHORT).show();
                             Log.i("My App", "Changes to next screen!");
-                            startActivity(new Intent( LoginActivity.this, HomePage.class ));
+                            startActivity(new Intent(LoginActivity.this, HomePage.class));
                         }
 
                         else {
+                            pDiag.dismiss();
                             Toast.makeText(getApplicationContext(), "Registeration Failed!", Toast.LENGTH_SHORT).show();
                             Log.i("My App", "Resgisteration failed");
 
                         }
                     }
                 });
-
     }
+
+
+        /**
+         * looks for user on database to see if user exists
+         * and logs them in if the user does exist
+         */
+        public void checkLogIn(){
+            String email = mEmailView.getText().toString().trim();
+            String password = mPasswordView.getText().toString().trim();
+            //checking if both strings is empty
+            if (mEmailView.getTextSize() == 0) {
+                Toast.makeText(getApplicationContext(), "Please Enter Email", Toast.LENGTH_SHORT).show();
+                return;
+            }
+            if (mPasswordView.getTextSize() == 0) {
+                Toast.makeText(getApplicationContext(), "Please Enter Password", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            pDiag.setMessage("Processing. Please Wait");
+            pDiag.show();
+
+            firebaseAuth.signInWithEmailAndPassword(email, password)
+                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            pDiag.dismiss();
+                            if (task.isSuccessful()){
+                                Toast.makeText(getApplicationContext(), "Sign In Successful!", Toast.LENGTH_SHORT).show();
+                                Log.i("My App", "Changes to next screen!");
+                                startActivity(new Intent(LoginActivity.this, HomePage.class));
+                            }
+                            else if (firebaseAuth.getCurrentUser() == null){
+                                Toast.makeText(getApplicationContext(), "User Not Registered!", Toast.LENGTH_SHORT).show();
+                                Log.i("My App", "User not Registered");
+                            }
+                            else {
+                                Toast.makeText(getApplicationContext(), "Sign In failed. Check email or password", Toast.LENGTH_SHORT).show();
+                                Log.i("My App", "Sign in fail ");
+
+                            }
+                        }
+                    });
+        }
+
+
     /**
      * button register/ sign in should give funtion:
      * 1- if old user, login
@@ -137,6 +193,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public void onClick(View view) {
         if(view == emailReg){
             registerUser();
+        }
+        else if(view == emailSignIn){
+            checkLogIn();
         }
     }
 }
